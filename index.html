@@ -54,19 +54,19 @@
     border-bottom:1px solid var(--line);
   }
   .brand{
-    font-family:'Newsreader',serif;font-weight:600;font-size:19px;
-    letter-spacing:.3px;color:var(--paper);text-decoration:none;
+    font-family:'Arial Black','Arial',sans-serif;font-weight:900;font-size:19px;
+    letter-spacing:-.3px;color:var(--paper);text-decoration:none;
   }
-  .brand span{color:var(--amber)}
+  .brand span{color:var(--paper)}
   .nav-right{display:flex;align-items:center;gap:26px}
   .nav-menu{display:flex;gap:26px;font-family:'Inter',sans-serif}
   body.lang-ko .nav-menu{font-family:'Noto Serif KR',serif}
   .nav-menu a{
-    color:var(--paper-dim);text-decoration:none;font-size:14px;font-weight:500;
-    letter-spacing:.2px;transition:color .2s;position:relative;padding:4px 0;
+    color:var(--paper);text-decoration:none;font-size:14px;font-weight:700;
+    letter-spacing:.2px;transition:color .2s;position:relative;padding:4px 0;opacity:.85;
   }
-  .nav-menu a:hover{color:var(--paper)}
-  .nav-menu a.active{color:var(--amber)}
+  .nav-menu a:hover{color:var(--paper);opacity:1}
+  .nav-menu a.active{color:var(--amber);opacity:1}
   .nav-menu a.active::after{
     content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;
     background:var(--amber);border-radius:2px;
@@ -96,6 +96,8 @@
   span.ko-only,span.en-only{display:inline}
   body.lang-ko span.en-only{display:none}
   body:not(.lang-ko) span.ko-only{display:none}
+  .cherry-ko{display:none}
+  body.lang-ko .cherry-ko{display:inline}
   .lang-toggle button:focus-visible,a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 
   /* ---------- 히어로 ---------- */
@@ -188,21 +190,21 @@
   .diff-item h4{font-size:.98rem;font-weight:600;margin-bottom:8px;font-family:'Noto Serif KR','Newsreader',serif}
   .diff-item p{color:var(--paper-dim);font-size:.88rem;max-width:34ch;line-height:1.7}
 
-  /* Footer */
-  footer{border-top:1px solid var(--line);padding:64px 0 48px}
-  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;align-items:flex-start}
-  .foot-brand{font-family:'Newsreader',serif;font-size:1.4rem;font-weight:600;line-height:1.1}
-  .foot-brand span{color:var(--amber)}
-  .foot-sub{color:var(--paper-dim);font-size:.9rem;margin-top:3px}
-  .foot-label{color:var(--paper-dim);font-size:.9rem;margin-bottom:3px}
-  .foot-info{color:var(--paper-dim);font-size:.82rem;line-height:1.7;margin-top:12px}
-  .foot-contact a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:2px}
-  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;margin-top:40px}
-  .foot-legal{color:var(--paper-dim);font-size:.82rem;font-family:'Inter',sans-serif}
-  .foot-links{display:flex;gap:18px;font-family:'Inter',sans-serif}
-  .foot-links a{color:var(--paper-dim);font-size:.82rem;text-decoration:none;transition:color .2s}
-  .foot-links a:hover{color:var(--amber)}
-
+  /* Footer — 2단: 왼쪽 로고블록 / 오른쪽 정보블록 (가로줄 없음) */
+  footer{padding:80px 0 56px}
+  .foot-wrap{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap}
+  .foot-left .foot-brand{font-family:'Arial Black','Arial',sans-serif;font-size:1.5rem;font-weight:900;line-height:1.1;letter-spacing:-.3px;margin-bottom:4px}
+  .foot-brand span{color:var(--paper)}
+  .foot-left .foot-sub{color:var(--paper-dim);font-size:.9rem}
+  .foot-right{max-width:560px}
+  .foot-info{color:var(--paper-dim);font-size:.88rem;line-height:1.9}
+  .foot-info a{color:var(--paper-dim);text-decoration:none;transition:color .2s}
+  .foot-info a:hover{color:var(--amber)}
+  .foot-bottom{margin-top:24px;color:var(--paper-dim);font-size:.82rem;line-height:1.9}
+  .foot-bottom a{color:var(--paper-dim);text-decoration:none;transition:color .2s}
+  .foot-bottom a:hover{color:var(--amber)}
+  .foot-copy{font-family:'Inter',sans-serif}
+  .foot-links{display:inline-flex;gap:16px;margin-left:14px;font-family:'Inter',sans-serif}
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){
@@ -227,7 +229,8 @@
     .diff-grid{grid-template-columns:1fr;gap:28px}
     .diff-item{padding:0}
     .hero{padding:110px 0 70px}
-    .foot-grid,.foot-bottom{flex-direction:column;align-items:flex-start}
+    .foot-wrap{flex-direction:column;gap:28px}
+    .foot-links{display:flex;flex-wrap:wrap;gap:16px;margin-left:0;margin-top:10px}
   }
 </style>
 </head>
@@ -308,7 +311,7 @@
       <div class="card reveal">
         <span class="tag ko-only">첫 번째 프로젝트</span>
         <span class="tag en-only">First project</span>
-        <h3>CherryFarm <span class="ko-only" style="font-size:.7em;color:var(--paper-dim)">체리팜</span></h3>
+        <h3 style="white-space:nowrap">CherryFarm&nbsp;<span class="cherry-ko" style="font-size:.7em;color:var(--paper-dim)">체리팜</span></h3>
         <p>
           <span class="ko-only">유튜브 채널의 이벤트 운영을 AI로 자동화하는 플랫폼. 이벤트 기획부터 추첨, 경품 발송, 개인정보 관리까지 하나의 흐름으로 처리합니다.</span>
           <span class="en-only">An AI platform that automates YouTube event operations — from planning to draws, prize delivery, and privacy management, all in one flow.</span>
@@ -328,13 +331,13 @@
         </div>
         <div class="diff-item reveal">
           <div class="d-num">02</div>
-          <h4><span class="ko-only">원스톱 자동 운영</span><span class="en-only">One-stop automation</span></h4>
-          <p><span class="ko-only">자격 검증·무작위 추첨·경품 발송까지 사람 손이 닿지 않는 자동 워크플로우.</span><span class="en-only">Eligibility checks, random draws, and prize delivery — a hands-off workflow from start to finish.</span></p>
+          <h4><span class="ko-only">믿을 수 있는 개인정보 처리</span><span class="en-only">Privacy by design</span></h4>
+          <p><span class="ko-only">수집한 개인정보를 안전하게 보관하고, 필요한 순간이 지나면 자동으로 파기합니다.</span><span class="en-only">Data collection through disposal, built into the system itself.</span></p>
         </div>
         <div class="diff-item reveal">
           <div class="d-num">03</div>
-          <h4><span class="ko-only">설계된 개인정보 보호</span><span class="en-only">Privacy by design</span></h4>
-          <p><span class="ko-only">수집부터 파기까지 개인정보 처리 절차를 시스템에 내재화했습니다.</span><span class="en-only">Data collection through disposal, built into the system itself.</span></p>
+          <h4><span class="ko-only">원스톱 자동 운영</span><span class="en-only">One-stop automation</span></h4>
+          <p><span class="ko-only">자격 검증·무작위 추첨·경품 발송까지 사람 손이 닿지 않는 자동 워크플로우.</span><span class="en-only">Eligibility checks, random draws, and prize delivery — a hands-off workflow from start to finish.</span></p>
         </div>
       </div>
     </div>
@@ -343,25 +346,23 @@
   <!-- FOOTER -->
   <footer id="contact">
     <div class="wrap">
-      <div class="foot-grid">
-        <div>
+      <div class="foot-wrap">
+        <div class="foot-left">
           <div class="foot-brand">OLNR<span>.</span>Labs</div>
           <div class="foot-sub"><span class="ko-only">주식회사 오엘엔알랩스</span><span class="en-only">OLNR Labs Inc.</span></div>
+        </div>
+        <div class="foot-right">
           <div class="foot-info">
-            <span class="ko-only">서울특별시 강남구 테헤란로 423, 2층 2480호<br>사업자등록번호 000-00-00000</span>
-            <span class="en-only">2480, 2F, 423 Teheran-ro, Gangnam-gu, Seoul, Republic of Korea<br>Business Reg. No. 000-00-00000</span>
+            <span class="ko-only">사업자등록번호 806-81-03670<br>서울특별시 강남구 테헤란로 423, 2층 2480호<br>문의 <a href="mailto:contact@olnrlabs.io">contact@olnrlabs.io</a></span>
+            <span class="en-only">Business Reg. No. 806-81-03670<br>2480, 2F, 423 Teheran-ro, Gangnam-gu, Seoul, Republic of Korea<br>Contact <a href="mailto:contact@olnrlabs.io">contact@olnrlabs.io</a></span>
           </div>
-        </div>
-        <div class="foot-contact">
-          <div class="foot-label"><span class="ko-only">문의</span><span class="en-only">Contact</span></div>
-          <a href="mailto:contact@olnrlabs.io">contact@olnrlabs.io</a>
-        </div>
-      </div>
-      <div class="foot-bottom">
-        <div class="foot-legal">© 2026 OLNR Labs. All rights reserved.</div>
-        <div class="foot-links">
-          <a href="#"><span class="ko-only">개인정보처리방침</span><span class="en-only">Privacy</span></a>
-          <a href="#"><span class="ko-only">이용약관</span><span class="en-only">Terms</span></a>
+          <div class="foot-bottom">
+            <span class="foot-copy">© 2026 OLNR Labs. All rights reserved.</span>
+            <span class="foot-links">
+              <a href="privacy.html"><span class="ko-only">개인정보처리방침</span><span class="en-only">Privacy</span></a>
+              <a href="terms.html"><span class="ko-only">이용약관</span><span class="en-only">Terms</span></a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -378,10 +379,29 @@
     document.getElementById('btn-en').classList.toggle('active', lang==='en');
   }
   function toggleMenu(){ document.getElementById('navMenu').classList.toggle('open'); }
-  // 메뉴 클릭 시 모바일 메뉴 닫기
+
+  // 메뉴 클릭: 클릭한 메뉴만 즉시 활성화하고, 스크롤 이동이 끝날 때까지 자동 하이라이트를 잠근다
+  let navClickLock = false;
+  let navClickTimer = null;
   document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',()=>{
     document.getElementById('navMenu').classList.remove('open');
+    const id = a.getAttribute('href').slice(1);
+    // 클릭한 메뉴만 보라색으로
+    Object.values(navLinks).forEach(l=>l.classList.remove('active'));
+    if(navLinks[id]) navLinks[id].classList.add('active');
+    // 이동 중엔 스크롤 감지 무시 (중간 메뉴 깜빡임 방지)
+    navClickLock = true;
+    clearTimeout(navClickTimer);
+    navClickTimer = setTimeout(()=>{ navClickLock = false; updateActiveNav(); }, 800);
   }));
+
+  // 로고 클릭(맨 위로): 이동 중엔 감지 잠그고, 히어로 구간이므로 메뉴 전부 해제
+  document.querySelector('.brand').addEventListener('click',()=>{
+    Object.values(navLinks).forEach(l=>l.classList.remove('active'));
+    navClickLock = true;
+    clearTimeout(navClickTimer);
+    navClickTimer = setTimeout(()=>{ navClickLock = false; updateActiveNav(); }, 800);
+  });
 
   const header = document.getElementById('site-header');
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
@@ -394,20 +414,37 @@
   }, {threshold:0.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // 현재 섹션 메뉴 하이라이트
-  const sections = ['vision','team','projects','contact'].map(id=>document.getElementById(id));
-  const links = {};
-  document.querySelectorAll('.nav-link').forEach(a=>{ links[a.getAttribute('href').slice(1)] = a; });
-  const spy = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        Object.values(links).forEach(l=>l.classList.remove('active'));
-        const id = e.target.id;
-        if(links[id]) links[id].classList.add('active');
+  // 현재 섹션 메뉴 하이라이트 (히어로 구간에선 아무것도 활성화 안 함)
+  const spySections = ['vision','team','projects','contact'];
+  const navLinks = {};
+  document.querySelectorAll('.nav-link').forEach(a=>{ navLinks[a.getAttribute('href').slice(1)] = a; });
+
+  function updateActiveNav(){
+    if(navClickLock) return; // 메뉴 클릭 이동 중엔 자동 전환 무시
+    const vision = document.getElementById('vision');
+    const mid = window.scrollY + window.innerHeight * 0.45; // 화면 중앙 부근 기준선
+    // 맨 위 근처이거나 아직 비전 섹션에 도달하지 않았으면(=히어로 구간) 전부 해제
+    if(window.scrollY < 60 || (vision && mid < vision.offsetTop)){
+      Object.values(navLinks).forEach(l=>l.classList.remove('active'));
+      return;
+    }
+    // 페이지 맨 아래에 거의 도달하면 마지막 메뉴(문의) 활성화 — 푸터가 낮아 중앙 판정에 안 걸리는 문제 보정
+    const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 4);
+    let current = spySections[0];
+    if(nearBottom){
+      current = spySections[spySections.length - 1]; // 'contact'
+    } else {
+      for(const id of spySections){
+        const el = document.getElementById(id);
+        if(el && el.offsetTop <= mid) current = id;
       }
-    });
-  }, {rootMargin:'-45% 0px -50% 0px'});
-  sections.forEach(s=>{ if(s) spy.observe(s); });
+    }
+    Object.values(navLinks).forEach(l=>l.classList.remove('active'));
+    if(current && navLinks[current]) navLinks[current].classList.add('active');
+  }
+  window.addEventListener('scroll', updateActiveNav, {passive:true});
+  window.addEventListener('resize', updateActiveNav, {passive:true});
+  updateActiveNav();
 </script>
 </body>
 </html>
