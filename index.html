@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XRD30XX00"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-2XRD30XX00');
 </script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- 시안 A: Newsreader + 인디고/라벤더 --><!-- 변주3: 라벤더글로우 --><!-- 옵션1: 왼쪽 들여쓰기 --><title>OLNR Labs — 마케팅을, 기술로 다시 씁니다</title>
 <meta name="description" content="오엘엔알랩스는 오랜 마케팅 현장 경험을 기술과 결합해, 마케터의 일하는 방식과 마케팅의 성과를 끌어올립니다.">
@@ -188,6 +187,7 @@
     font-family:'Inter',sans-serif;
   }
   body.lang-ko .learn-more{font-family:'Noto Serif KR',serif}
+  .learn-more .soon{color:var(--paper-dim);font-weight:400;font-size:.82rem;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
   .learn-more .arrow{transition:transform .2s}
   .learn-more:hover .arrow{transform:translateX(4px)}
 
@@ -324,9 +324,10 @@
           <span class="ko-only">유튜브 채널의 이벤트 운영을 AI로 자동화하는 플랫폼. 이벤트 기획부터 추첨, 경품 발송, 개인정보 관리까지 하나의 흐름으로 처리합니다.</span>
           <span class="en-only">An AI platform that automates YouTube event operations — from planning to draws, prize delivery, and privacy management, all in one flow.</span>
         </p>
-        <a class="learn-more" href="https://cherryfarm.events">
+        <a class="learn-more" href="#" aria-disabled="true" onclick="return false;">
           <span class="ko-only">자세히 보기</span><span class="en-only">Learn more</span>
           <span class="arrow">→</span>
+          <span class="soon ko-only">준비 중</span><span class="soon en-only">Coming soon</span>
         </a>
       </div>
 
