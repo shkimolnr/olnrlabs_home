@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XRD30XX00"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-2XRD30XX00');
 </script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- 시안 A: Newsreader + 인디고/라벤더 --><!-- 변주3: 라벤더글로우 --><!-- 옵션1: 왼쪽 들여쓰기 --><title>개인정보처리방침 — OLNR Labs</title>
 <meta name="description" content="오엘엔알랩스는 오랜 마케팅 현장 경험을 기술과 결합해, 마케터의 일하는 방식과 마케팅의 성과를 끌어올립니다.">
@@ -240,8 +239,21 @@
   }
 
   /* 서브페이지 제목 — 한글/영문 모두 세리프 */
-  .legal-title{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.4px;margin-bottom:32px;line-height:1.2}
+  .legal-title{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.4px;margin-bottom:12px;line-height:1.2}
   body.lang-ko .legal-title{font-family:'Noto Serif KR',serif;font-weight:700;letter-spacing:-.8px}
+  /* 법적 문서 본문 */
+  .legal-meta{color:var(--paper-dim);font-size:.85rem;margin-bottom:48px;font-family:'Inter',sans-serif}
+  body.lang-ko .legal-meta{font-family:'Noto Serif KR',serif}
+  .legal-body h2{font-family:'Noto Serif KR','Newsreader',serif;font-weight:700;font-size:1.25rem;color:var(--paper);margin:40px 0 14px;letter-spacing:-.3px}
+  .legal-body p{color:var(--paper-dim);font-size:.96rem;line-height:1.85;margin-bottom:12px}
+  .legal-body ul{color:var(--paper-dim);font-size:.96rem;line-height:1.85;margin:0 0 12px;padding-left:20px}
+  .legal-body li{margin-bottom:6px}
+  .legal-body a{color:var(--amber);text-decoration:none}
+  .legal-body a:hover{text-decoration:underline}
+  .legal-body strong{color:var(--paper);font-weight:600}
+  .legal-body .tbl{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:.9rem}
+  .legal-body .tbl th,.legal-body .tbl td{border:1px solid var(--line);padding:10px 12px;text-align:left;color:var(--paper-dim);vertical-align:top}
+  .legal-body .tbl th{color:var(--paper);font-weight:600;background:rgba(255,255,255,.03)}
   </style>
 </head>
 <body class="lang-ko">
@@ -258,14 +270,92 @@
 </header>
 
 <main id="top" style="max-width:820px;margin:0 auto;padding:140px 28px 100px">
-  <div class="sec-label" style="color:var(--amber)">v0.1 · Draft</div>
+  <div class="sec-label" style="color:var(--amber)">v1.0</div>
   <h1 class="legal-title">
     <span class="ko-only">개인정보처리방침</span><span class="en-only">Privacy Policy</span>
   </h1>
-  <p class="body-lg" style="color:var(--paper-dim)">
-    <span class="ko-only">본 문서는 현재 준비 중입니다.</span>
-    <span class="en-only">This document is currently being prepared.</span>
-  </p>
+  <div class="legal-meta">
+    <span class="ko-only">시행일: 2026년 10월 8일</span>
+    <span class="en-only">Effective date: October 8, 2026</span>
+  </div>
+
+  <!-- 국문 -->
+  <div class="legal-body ko-only">
+    <p>주식회사 오엘엔알랩스(이하 "회사")는 회사 소개 웹사이트 olnrlabs.io(이하 "사이트") 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 사이트가 어떤 정보를 어떻게 수집·이용하는지 안내합니다.</p>
+
+    <h2>1. 수집하는 정보와 방법</h2>
+    <p>본 사이트는 회원가입이나 입력 양식을 통해 개인정보를 직접 수집하지 않습니다. 다만 사이트 이용 과정에서 다음 정보가 자동으로 수집될 수 있습니다.</p>
+    <ul>
+      <li>수집 항목: 접속 IP 주소, 브라우저 및 기기 정보, 방문 일시, 방문 페이지 및 이용 기록</li>
+      <li>수집 방법: 구글 애널리틱스(Google Analytics)를 통한 자동 수집(쿠키 이용)</li>
+    </ul>
+
+    <h2>2. 이용 목적</h2>
+    <p>수집된 정보는 사이트 이용 현황 분석 및 서비스 개선을 위한 통계 목적으로만 이용하며, 이용자 개개인을 식별하는 용도로 사용하지 않습니다.</p>
+
+    <h2>3. 보유 및 이용 기간</h2>
+    <p>자동으로 수집된 접속 기록 등은 수집일로부터 최대 14개월간 보관 후 파기합니다(구글 애널리틱스 데이터 보관 기간 설정에 따름).</p>
+
+    <h2>4. 제3자 제공 및 처리위탁</h2>
+    <p>회사는 이용자의 개인정보를 외부에 제공하지 않습니다. 다만 통계 분석을 위해 구글(Google LLC)의 애널리틱스 서비스를 이용하며, 이 과정에서 접속 정보가 구글에 의해 처리될 수 있습니다. 구글의 개인정보 처리에 관한 사항은 구글 개인정보처리방침을 따릅니다.</p>
+
+    <h2>5. 쿠키(Cookie)의 이용</h2>
+    <p>본 사이트는 애널리틱스를 위해 쿠키를 사용합니다. 이용자는 웹 브라우저 설정을 통해 쿠키 저장을 거부할 수 있으며, 이 경우 사이트 통계 집계에서 제외됩니다. 쿠키 저장을 거부하여도 사이트 이용에는 제한이 없습니다.</p>
+
+    <h2>6. 이용자의 권리</h2>
+    <p>이용자는 관련 법령에 따라 자신의 개인정보에 대한 열람·정정·삭제·처리정지를 요청할 수 있습니다. 요청은 아래 연락처로 접수해 주시기 바랍니다.</p>
+
+    <h2>7. 개인정보 관련 문의</h2>
+    <p>개인정보 처리에 관한 문의, 불만 처리, 피해 구제 등은 아래 연락처로 접수해 주시기 바랍니다.</p>
+    <ul>
+      <li>문의: <a href="mailto:contact@olnrlabs.io">contact@olnrlabs.io</a></li>
+      <li>상호: 주식회사 오엘엔알랩스</li>
+      <li>사업자등록번호: 806-81-03670</li>
+      <li>주소: 서울특별시 강남구 테헤란로 423, 2층 2480호</li>
+    </ul>
+
+    <h2>8. 방침의 변경</h2>
+    <p>본 방침은 관련 법령 또는 서비스 변경에 따라 개정될 수 있으며, 개정 시 본 사이트를 통해 공지합니다.</p>
+  </div>
+
+  <!-- 영문 -->
+  <div class="legal-body en-only">
+    <p>OLNR Labs Inc. ("the Company") respects the privacy of visitors to its corporate website, olnrlabs.io ("the Site"), and complies with the Personal Information Protection Act of Korea and other applicable laws. This policy explains what information the Site collects and how it is used.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>The Site does not directly collect personal information through membership registration or input forms. However, the following information may be collected automatically during your visit:</p>
+    <ul>
+      <li>Items: IP address, browser and device information, date and time of visit, pages visited, and usage records</li>
+      <li>Method: Automatic collection via Google Analytics (using cookies)</li>
+    </ul>
+
+    <h2>2. Purpose of Use</h2>
+    <p>Collected information is used solely for statistical purposes — analyzing site usage and improving our service. It is not used to identify individual visitors.</p>
+
+    <h2>3. Retention Period</h2>
+    <p>Automatically collected information such as access logs is retained for up to 14 months from the date of collection and then destroyed (subject to Google Analytics data retention settings).</p>
+
+    <h2>4. Third-Party Provision and Processing</h2>
+    <p>The Company does not provide visitors' personal information to third parties. However, it uses Google LLC's Analytics service for statistical analysis, and access information may be processed by Google in this process. Google's handling of personal information is governed by Google's Privacy Policy.</p>
+
+    <h2>5. Use of Cookies</h2>
+    <p>The Site uses cookies for analytics. Visitors may refuse cookie storage through their browser settings, in which case they will be excluded from site statistics. Refusing cookies does not restrict use of the Site.</p>
+
+    <h2>6. Your Rights</h2>
+    <p>Under applicable law, visitors may request access to, correction of, deletion of, or suspension of processing of their personal information. Please submit requests to the contact below.</p>
+
+    <h2>7. Privacy Inquiries</h2>
+    <p>For inquiries, complaints, or remedies regarding the processing of personal information, please contact:</p>
+    <ul>
+      <li>Contact: <a href="mailto:contact@olnrlabs.io">contact@olnrlabs.io</a></li>
+      <li>Company: OLNR Labs Inc.</li>
+      <li>Business Registration No.: 806-81-03670</li>
+      <li>Address: 2480, 2F, 423 Teheran-ro, Gangnam-gu, Seoul, Republic of Korea</li>
+    </ul>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>This policy may be revised in accordance with relevant laws or service changes. Any revisions will be announced through the Site.</p>
+  </div>
 </main>
 
 <footer id="contact">
